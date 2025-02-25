@@ -12,3 +12,4 @@ E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Repository\obj\Debug\net8.
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Repository\obj\Debug\net8.0\PRN222.ProductStore.Repository.pdb
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Repository\obj\Debug\net8.0\PRN222.ProductStore.Repository.genruntimeconfig.cache
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Repository\obj\Debug\net8.0\ref\PRN222.ProductStore.Repository.dll
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Repository\obj\Debug\net8.0\PRN222.ProductStore.Repository.sourcelink.json

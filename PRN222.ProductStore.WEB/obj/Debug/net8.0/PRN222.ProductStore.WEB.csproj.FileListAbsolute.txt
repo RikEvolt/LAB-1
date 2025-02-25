@@ -268,3 +268,4 @@ E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.WEB\obj\Debug\net8.0\refin
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.WEB\obj\Debug\net8.0\PRN222.ProductStore.WEB.pdb
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.WEB\obj\Debug\net8.0\PRN222.ProductStore.WEB.genruntimeconfig.cache
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.WEB\obj\Debug\net8.0\ref\PRN222.ProductStore.WEB.dll
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.WEB\obj\Debug\net8.0\PRN222.ProductStore.WEB.sourcelink.json

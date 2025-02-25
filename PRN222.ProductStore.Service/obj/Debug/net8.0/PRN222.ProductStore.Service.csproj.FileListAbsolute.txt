@@ -15,3 +15,4 @@ E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\r
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.pdb
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.genruntimeconfig.cache
 E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\ref\PRN222.ProductStore.Service.dll
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.sourcelink.json
