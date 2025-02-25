@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace PRN222.ProductStore.Repository.Repositories
 {
-	public class CategoryRepository : ICategoryRepository
+	public class CategoryRepository : GenericRepository<Category> ,ICategoryRepository
 	{
 		private readonly ProductStoreContext _context;
+		private readonly DbSet<Category> _dbSet;
 
-		public CategoryRepository(ProductStoreContext context)
+		public CategoryRepository(ProductStoreContext context) : base(context)
 		{
-			_context = context;
+			_dbSet = context.Set<Category>();
 		}
 
 		public async Task<List<Category>> GetCategoriesAsync()
 		{
-			return await _context.Categories.ToListAsync();
+			return await _dbSet.ToListAsync();
 		}
 
 	}

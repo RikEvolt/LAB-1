@@ -16,10 +16,10 @@ namespace PRN222.ProductStore.Service.Services
 			_mapper = mapper;
 		}
 
-		public async Task<AccountMemberDTO> GetAccountByIdAsync(string email)
+		public async Task<AccountMemberDTO?> GetAccountByEmailAsync(string email)
 		{
-			var account = await _accountRepository.GetAccountByIdAsync(email);
-			return _mapper.Map<AccountMemberDTO>(account);
+			var account = await _accountRepository.GetAccountByEmailAsync(email);
+			return account != null ? _mapper.Map<AccountMemberDTO>(account) : null;
 		}
 	}
 }

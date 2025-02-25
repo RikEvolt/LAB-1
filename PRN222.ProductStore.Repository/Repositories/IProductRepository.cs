@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace PRN222.ProductStore.Repository.Repositories
 {
-	public interface IProductRepository
+	public interface IProductRepository : IGenericRepository<Product>
 	{
-		Task<List<Product>> GetProductsAsync();
-		Task SaveProductAsync(Product p);
-		Task UpdateProductAsync(Product p);
-		Task DeleteProductAsync(Product p);
-		Task<Product> GetProductByIdAsync(int id);
+
 	}
 }

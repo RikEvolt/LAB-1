@@ -5,23 +5,24 @@ using System.Threading.Tasks;
 
 namespace PRN222.ProductStore.Repository.Repositories
 {
-	public class AccountRepository : IAccountRepository
+	public class AccountRepository : GenericRepository<AccountMember>, IAccountRepository
 	{
 		private readonly ProductStoreContext _context;
+		private readonly DbSet<AccountMember> _dbSet;
 
-		public AccountRepository(ProductStoreContext context)
+		public AccountRepository(ProductStoreContext context) : base(context)
 		{
-			_context = context;
+			_dbSet = context.Set<AccountMember>();
 		}
 
-		public async Task<AccountMember?> GetAccountByIdAsync(string email)
+		public async Task<AccountMember?> GetAccountByEmailAsync(string email)
 		{
 			if (string.IsNullOrWhiteSpace(email))
 			{
 				return null;
 			}
 
-			return await _context.AccountMembers.FirstOrDefaultAsync(x => x.EmailAddress == email);
+			return await _dbSet.FirstOrDefaultAsync(x => x.EmailAddress == email);
 		}
 	}
 }

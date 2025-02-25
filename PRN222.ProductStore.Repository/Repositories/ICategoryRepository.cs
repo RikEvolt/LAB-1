@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PRN222.ProductStore.Repository.Repositories
 {
-	public interface ICategoryRepository
+	public interface ICategoryRepository : IGenericRepository<Category>
 	{
-		Task<List<Category>> GetCategoriesAsync();
+
 	}
 }

@@ -9,6 +9,6 @@ namespace PRN222.ProductStore.Service.Services
 {
 	public interface IAccountService
 	{
-		Task<AccountMemberDTO> GetAccountByIdAsync(string email);
+		Task<AccountMemberDTO> GetAccountByEmailAsync(string email);
 	}
 }

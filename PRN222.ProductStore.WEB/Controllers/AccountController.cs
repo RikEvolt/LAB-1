@@ -37,7 +37,7 @@ namespace PRN222.ProductStore.WEB.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var user = await _accountService.GetAccountByIdAsync(model.EmailAddress);
+				var user = await _accountService.GetAccountByEmailAsync(model.EmailAddress);
 
 				if (user != null && user.MemberPassword == model.MemberPassword)
 				{

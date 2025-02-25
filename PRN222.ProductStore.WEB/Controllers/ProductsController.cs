@@ -21,14 +21,17 @@ namespace PRN222.ProductStore.WEB.Controllers
             _categoryService = categoryService;
         }
 
-        // GET: Products
         public async Task<IActionResult> Index()
         {
+            if (HttpContext.Session.GetString("UserId") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+                
             var product = await _productService.GetProductsAsync();
-			return View(product.ToList());
+            return View(product.ToList());
         }
 
-        // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -45,18 +48,13 @@ namespace PRN222.ProductStore.WEB.Controllers
             return View(product);
         }
 
-		// GET: Products/Create
 		public async Task<IActionResult> Create()
 		{
-			var categories = await _categoryService.GetCategories(); // Chờ lấy dữ liệu từ service
+			var categories = await _categoryService.GetCategoriesAsync(); // Chờ lấy dữ liệu từ service
 			ViewData["CategoryId"] = new SelectList(categories, "CategoryId", "CategoryName");
 			return View();
 		}
 
-
-		// POST: Products/Create
-		// To protect from overposting attacks, enable the specific properties you want to bind to.
-		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,CategoryId,UnitslnStock,UnitPrice")] ProductDTO product)
@@ -66,12 +64,11 @@ namespace PRN222.ProductStore.WEB.Controllers
                 _productService.CreateProductAsync(product);
                 return RedirectToAction(nameof(Index));
             }
-			var categories = await _categoryService.GetCategories();
+			var categories = await _categoryService.GetCategoriesAsync();
 			ViewData["CategoryId"] = new SelectList(categories, "CategoryId", "CategoryName", product.CategoryId);
 			return View(product);
         }
 
-        // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,14 +81,11 @@ namespace PRN222.ProductStore.WEB.Controllers
             {
                 return NotFound();
             }
-			var categories = await _categoryService.GetCategories();
+			var categories = await _categoryService.GetCategoriesAsync();
 			ViewData["CategoryId"] = new SelectList(categories, "CategoryId", "CategoryName", product.CategoryId);
 			return View(product);
         }
 
-        // POST: Products/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,CategoryId,UnitslnStock,UnitPrice")] ProductDTO product)
@@ -120,12 +114,11 @@ namespace PRN222.ProductStore.WEB.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-			var categories = await _categoryService.GetCategories();
+			var categories = await _categoryService.GetCategoriesAsync();
 			ViewData["CategoryId"] = new SelectList(categories, "CategoryId", "CategoryName", product.CategoryId);
 			return View(product);
         }
 
-        // GET: Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -142,7 +135,6 @@ namespace PRN222.ProductStore.WEB.Controllers
             return View(product);
         }
 
-        // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

@@ -17,5 +17,6 @@ namespace PRN222.ProductStore.Service.BusinessModels
 		public short? UnitslnStock { get; set; }
 
 		public decimal? UnitPrice { get; set; }
+
 	}
 }

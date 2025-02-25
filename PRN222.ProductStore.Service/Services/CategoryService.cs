@@ -17,9 +17,9 @@ namespace PRN222.ProductStore.Service.Services
 			_mapper = mapper;
 		}
 
-		public async Task<List<CategoryDTO>> GetCategories()
+		public async Task<List<CategoryDTO>> GetCategoriesAsync()
 		{
-			var categories = await _categoryRepository.GetCategoriesAsync();
+			var categories = await _categoryRepository.GetAllAsync();
 			return _mapper.Map<List<CategoryDTO>>(categories);
 		}
 	}

@@ -9,6 +9,6 @@ namespace PRN222.ProductStore.Service.Services
 {
 	public interface ICategoryService
 	{
-		Task<List<CategoryDTO>> GetCategories();
+		Task<List<CategoryDTO>> GetCategoriesAsync();
 	}
 }

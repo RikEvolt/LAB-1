@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PRN222.ProductStore.Repository.Repositories
 {
-	public interface IAccountRepository
+	public interface IAccountRepository : IGenericRepository<AccountMember>
 	{
-		Task<AccountMember?> GetAccountByIdAsync(string email);
+		Task<AccountMember?> GetAccountByEmailAsync(string email);
 	}
 }
