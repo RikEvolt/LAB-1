@@ -1,0 +1,17 @@
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\bin\Debug\net8.0\PRN222.ProductStore.Service.deps.json
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\bin\Debug\net8.0\PRN222.ProductStore.Service.runtimeconfig.json
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\bin\Debug\net8.0\PRN222.ProductStore.Service.dll
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\bin\Debug\net8.0\PRN222.ProductStore.Service.pdb
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\bin\Debug\net8.0\PRN222.ProductStore.Repository.dll
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\bin\Debug\net8.0\PRN222.ProductStore.Repository.pdb
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.csproj.AssemblyReference.cache
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.AssemblyInfoInputs.cache
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.AssemblyInfo.cs
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.csproj.CoreCompileInputs.cache
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.P.4EBA13BE.Up2Date
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.dll
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\refint\PRN222.ProductStore.Service.dll
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.pdb
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\PRN222.ProductStore.Service.genruntimeconfig.cache
+E:\PRN222\PRN222.ProductStore.WEB\PRN222.ProductStore.Service\obj\Debug\net8.0\ref\PRN222.ProductStore.Service.dll
