@@ -9,6 +9,6 @@ namespace PRN222.ProductStore.Repository.Repositories
 {
 	public interface IAccountRepository : IGenericRepository<AccountMember>
 	{
-		Task<AccountMember?> GetAccountByEmailAsync(string email);
+		Task<AccountMember?> GetAccountByEmailAsync(string email, string password);
 	}
 }

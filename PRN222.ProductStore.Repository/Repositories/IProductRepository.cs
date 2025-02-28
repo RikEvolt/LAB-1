@@ -9,6 +9,7 @@ namespace PRN222.ProductStore.Repository.Repositories
 {
 	public interface IProductRepository : IGenericRepository<Product>
 	{
-
+		Task<Product> GetProductById(int id);
+		Task<List<Product>> GetProducts();
 	}
 }

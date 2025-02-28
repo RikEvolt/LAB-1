@@ -8,21 +8,20 @@ namespace PRN222.ProductStore.Repository.Repositories
 	public class AccountRepository : GenericRepository<AccountMember>, IAccountRepository
 	{
 		private readonly ProductStoreContext _context;
-		private readonly DbSet<AccountMember> _dbSet;
 
 		public AccountRepository(ProductStoreContext context) : base(context)
 		{
-			_dbSet = context.Set<AccountMember>();
+			_context = context;
 		}
 
-		public async Task<AccountMember?> GetAccountByEmailAsync(string email)
+		public async Task<AccountMember?> GetAccountByEmailAsync(string email, string password)
 		{
-			if (string.IsNullOrWhiteSpace(email))
+			if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
 			{
 				return null;
 			}
 
-			return await _dbSet.FirstOrDefaultAsync(x => x.EmailAddress == email);
+			return await _context.AccountMembers.FirstOrDefaultAsync(x => x.EmailAddress == email);
 		}
 	}
 }

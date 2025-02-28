@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRN222.ProductStore.WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b69ea425fedf49c6337c43da1f57471fc5f77f99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26ac5f15ddc82c28e56ee6ebd9e01eb396b9cfa1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRN222.ProductStore.WEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRN222.ProductStore.WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

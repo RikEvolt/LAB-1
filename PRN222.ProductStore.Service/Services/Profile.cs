@@ -6,7 +6,6 @@ public class MappingProfile : Profile
 {
 	public MappingProfile()
 	{
-		// Mapping giữa Entity (DB) và DTO (BusinessModels)
 		CreateMap<Product, ProductDTO>().ReverseMap();
 		CreateMap<Category, CategoryDTO>().ReverseMap();
 		CreateMap<AccountMember, AccountMemberDTO>().ReverseMap();

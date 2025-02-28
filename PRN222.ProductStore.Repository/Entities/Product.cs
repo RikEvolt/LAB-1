@@ -16,4 +16,6 @@ public partial class Product
     public short? UnitslnStock { get; set; }
 
     public decimal? UnitPrice { get; set; }
+
+    public virtual Category Category { get; set; }
 }

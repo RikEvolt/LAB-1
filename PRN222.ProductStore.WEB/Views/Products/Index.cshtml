@@ -1,8 +1,7 @@
 ﻿@model IEnumerable<PRN222.ProductStore.Service.BusinessModels.ProductDTO>
 
-
 @{
-    ViewData["Title"] = "GetAll";
+    ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
@@ -17,13 +16,13 @@
                 @Html.DisplayNameFor(model => model.ProductName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CategoryId)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.UnitslnStock)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
             </th>
             <th></th>
         </tr>
@@ -35,13 +34,13 @@
                 @Html.DisplayFor(modelItem => item.ProductName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CategoryId)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.UnitslnStock)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |

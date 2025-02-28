@@ -10,6 +10,6 @@ namespace PRN222.ProductStore.Service.BusinessModels
 	{
 		public int CategoryId { get; set; }
 
-		public string CataggoryName { get; set; }
+		public string CategoryName { get; set; }
 	}
 }

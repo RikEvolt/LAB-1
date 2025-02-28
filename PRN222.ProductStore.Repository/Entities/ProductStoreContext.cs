@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace PRN222.ProductStore.Repository.Entities;
 
@@ -14,7 +13,7 @@ public partial class ProductStoreContext : DbContext
     {
     }
 
-	public virtual DbSet<AccountMember> AccountMembers { get; set; }
+    public virtual DbSet<AccountMember> AccountMembers { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
 
@@ -45,7 +44,7 @@ public partial class ProductStoreContext : DbContext
         modelBuilder.Entity<Category>(entity =>
         {
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
-            entity.Property(e => e.CataggoryName)
+            entity.Property(e => e.CategoryName)
                 .IsRequired()
                 .HasMaxLength(15);
         });
@@ -58,6 +57,11 @@ public partial class ProductStoreContext : DbContext
                 .IsRequired()
                 .HasMaxLength(40);
             entity.Property(e => e.UnitPrice).HasColumnType("money");
+
+            entity.HasOne(d => d.Category).WithMany(p => p.Products)
+                .HasForeignKey(d => d.CategoryId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Products_Categories");
         });
 
         OnModelCreatingPartial(modelBuilder);

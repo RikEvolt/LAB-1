@@ -11,16 +11,15 @@ namespace PRN222.ProductStore.Repository.Repositories
 	public class CategoryRepository : GenericRepository<Category> ,ICategoryRepository
 	{
 		private readonly ProductStoreContext _context;
-		private readonly DbSet<Category> _dbSet;
 
 		public CategoryRepository(ProductStoreContext context) : base(context)
 		{
-			_dbSet = context.Set<Category>();
+			_context = context;
 		}
 
 		public async Task<List<Category>> GetCategoriesAsync()
 		{
-			return await _dbSet.ToListAsync();
+			return await _context.Categories.ToListAsync();
 		}
 
 	}
